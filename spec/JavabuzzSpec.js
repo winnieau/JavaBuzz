@@ -1,18 +1,33 @@
 describe("Javabuzz", function() {
-  var game;
+  var javabuzz;
 
 
   beforeEach(function() {
-    game = new Game();
-
+    javabuzz = new Javabuzz();
   });
 
   it("should return false if not divisible by 3", function() {
-    expect(game.isDivisibleByThree(1)).toEqual(false);
+    expect(javabuzz.isDivisibleByThree(1)).toEqual(false);
   });
 
   it("should return true if divisible by 3", function() {
-    expect(game.isDivisibleByThree(3)).toEqual(true);
+    expect(javabuzz.isDivisibleByThree(3)).toEqual(true);
+  });
+
+  it("should return false if not divisible by 5", function() {
+    expect(javabuzz.isDivisibleByFive(7)).toEqual(false);
+  });
+
+  it("should return true if divisible by 5", function () {
+    expect(javabuzz.isDivisibleByFive(5)).toEqual(true);
+  });
+
+  it("should return false if not divisible by 15", function() {
+    expect(javabuzz.isDivisibleByFifteen(7)).toEqual(false);
+  });
+
+  it("should return true if divisible by 15", function() {
+    expect(javabuzz.isDivisibleByFifteen(15)).toEqual(true);
   });
 
   // it("should be able to play a Song", function() {

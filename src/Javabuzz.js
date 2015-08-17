@@ -20,12 +20,29 @@
 // Player.prototype.makeFavorite = function() {
 //   this.currentlyPlayingSong.persistFavoriteStatus(true);
 // };
-function Game() {
+function Javabuzz() {
 }
-Game.prototype.isDivisibleByThree = function(number) {
-  if (number % 3 === 0) {
+
+Javabuzz.prototype._isDivisibleBy = function(number, divisor) {
+  return (number % divisor === 0);
+}
+
+Javabuzz.prototype.isDivisibleByThree = function(number) {
+  return this._isDivisibleBy(number, 3);
+};
+
+Javabuzz.prototype.isDivisibleByFive = function(number) {
+  if (number % 5 === 0) {
     return true;
   } else {
     return false;
-    }
+  }
+};
+
+Javabuzz.prototype.isDivisibleByFifteen = function(number) {
+  if (number % 15 === 0) {
+    return true;
+  } else {
+    return false;
+  }
 };
