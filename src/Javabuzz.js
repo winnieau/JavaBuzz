@@ -32,17 +32,18 @@ Javabuzz.prototype.isDivisibleByThree = function(number) {
 };
 
 Javabuzz.prototype.isDivisibleByFive = function(number) {
-  if (number % 5 === 0) {
-    return true;
-  } else {
-    return false;
-  }
+  return this._isDivisibleBy(number, 5);
 };
 
+
 Javabuzz.prototype.isDivisibleByFifteen = function(number) {
-  if (number % 15 === 0) {
-    return true;
-  } else {
-    return false;
-  }
+  return this._isDivisibleBy(number, 15);
 };
+
+Javabuzz.prototype.says = function(number) {
+  if(this.isDivisibleByThree(number)) {
+    return 'Java';
+  }if(this.isDivisibleByFive(number)) {
+    return 'Buzz';
+  }
+}
