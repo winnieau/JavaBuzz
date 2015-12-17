@@ -1,4 +1,4 @@
 # JavaBuzz
 JavaBuzz with Giuseppe
 
-Simple JavaBuss exercise as an introduction to JavaScript. 
+Simple JavaBuzz exercise as an introduction to Javascript. 
